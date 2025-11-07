@@ -1,0 +1,14 @@
+services:
+  - type: worker  # Use 'worker' for background process (no web port needed)
+    name: whatsapp-bot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    region: oregon  # Or your preferred region
+    plan: free
+    disk:
+      name: auth-disk
+      mountPath: /app/auth
+      sizeGB: 1  # Use persistent disk for auth state
+    envVars:
+      - key: NODE_ENV
+        value: production
