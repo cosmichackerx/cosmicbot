@@ -13,7 +13,7 @@ async function startBot() {
 
   // Handle pairing code for initial link
   if (!sock.authState.creds.registered) {
-    const phoneNumber = 'YOUR_PHONE_NUMBER_HERE'; // Replace with your WhatsApp number in international format, e.g., '15551234567' (no +, no spaces)
+    const phoneNumber = '923367307471'; // Replace with your WhatsApp number in international format, e.g., '15551234567' (no +, no spaces)
     const pairingCode = await sock.requestPairingCode(phoneNumber);
     console.log(`Pairing code: ${pairingCode}`);
     // Instruct user to go to WhatsApp > Linked Devices > Link with phone number > Enter code
